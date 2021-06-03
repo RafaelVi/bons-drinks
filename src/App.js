@@ -1,22 +1,36 @@
-import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
-import './App.css';
-import Footer from './components/Footer/Footer';
-import Header from './components/Header/Header';
-import Home from './components/Home/Home';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import "./App.css";
+import AboutUs from "./components/AboutUs/AboutUs";
+import Contact from "./components/Contact/Contact";
+import Drinks from "./components/Drinks/Drinks";
+import Footer from "./components/Footer/Footer";
+import Header from "./components/Header/Header";
+import Home from "./components/Home/Home";
+import OurTeam from "./components/OurTeam/OurTeam";
 
 function App() {
   return (
     <div className="App">
       <Router>
-       <Header/>
-       <Switch>
-         <Route exact path ="/"><Home/></Route>
-         <Route path ="/aboutUs"><h1>About Us</h1></Route>
-         <Route path ="/ourTeam"><h1>Our Team</h1></Route>
-         <Route path ="/contact"><h1>Contato</h1></Route>
-         <Route path ="/drinks"><h1>Drinks</h1></Route>
-       </Switch>
-       <Footer/>
+        <Header />
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route path="/aboutUs">
+            <AboutUs/>
+          </Route>
+          <Route path="/ourTeam">
+            <OurTeam/>
+          </Route>
+          <Route path="/contact">
+            <Contact />
+          </Route>
+          <Route exact path="/drinks/*">
+            <Drinks/>
+          </Route>
+        </Switch>
+        <Footer />
       </Router>
     </div>
   );
