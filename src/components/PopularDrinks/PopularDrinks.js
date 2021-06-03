@@ -1,32 +1,35 @@
 import React from "react";
-import './PopularDrinks.css'
+import "./PopularDrinks.css";
+import { getPopularDrinks } from "./../../services/api";
 
 const PopularDrinks = () => {
   const [drinks, setDrinks] = React.useState([]);
 
   React.useEffect(() => {
-    async function fetchApi(){
-     const response = await (await fetch("https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=Cocktail")).json();
-    setDrinks(response.drinks);
-     console.log(drinks);
-     console.log(response.drinks);
+    async function fetchApi() {
+      const data = await getPopularDrinks();
+      setDrinks(data);
     }
     fetchApi();
-    
   }, []);
   return (
     <div>
       <ul className="lista">
-        {drinks.slice(0,10).map((drink) => {
-          return <div key={drink.idDrink} className="card-drinks">
-              <img src={drink.strDrinkThumb} className="img-drinks" alt="drink"/>
+        {drinks.slice(0, 10).map((drink) => {
+          return (
+            <div key={drink.idDrink} className="card-drinks">
+              <img
+                src={drink.strDrinkThumb}
+                className="img-drinks"
+                alt="drink"
+              />
               <p className="text-drinks">{drink.strDrink}</p>
-              </div>;
+            </div>
+          );
         })}
       </ul>
     </div>
   );
-
 };
 
 export default PopularDrinks;

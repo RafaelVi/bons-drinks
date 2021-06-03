@@ -1,5 +1,6 @@
 import React from "react";
 import "./SearchDrinks.css";
+import {getDrinksSearch, getSubtypes, getFilteredDrinks} from './../../services/api';
 
 const SearchDrinks = () => {
   const [drinks, setDrinks] = React.useState([]);
@@ -7,39 +8,22 @@ const SearchDrinks = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    const response = await (
-      await fetch(
-        `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${event.target.drink.value}`
-      )
-    ).json();
-    setDrinks(response.drinks);
+    const data = await getDrinksSearch(event.target.drink.value);
+    setDrinks(data);
   };
   const changeFilter = async (event) => {
     event.preventDefault();
     const type = event.target.value;
-
-    const response = await (
-      await fetch(
-        `https://www.thecocktaildb.com/api/json/v1/1/list.php?${type}=list`
-      )
-    ).json();
+    const data = await getSubtypes(type);
     localStorage.setItem("type", type);
-    setCategories(response.drinks);
+    setCategories(data);
   };
   const filterDrinks = async (event) => {
     event.preventDefault();
     let select = event.target.value;
-
     let subtype = select.replaceAll(" ", "_");
-
-    const response = await (
-      await fetch(
-        `https://www.thecocktaildb.com/api/json/v1/1/filter.php?${localStorage.getItem(
-          "type"
-        )}=${subtype}`
-      )
-    ).json();
-    setDrinks(response.drinks);
+    const data = await getFilteredDrinks(subtype);
+    setDrinks(data);
   };
 
   return (
