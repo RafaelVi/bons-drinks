@@ -1,0 +1,17 @@
+.Time_Grid{
+    display: grid;
+    width: 50%;
+    justify-self: center;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: 80px repeat(2,auto);
+    grid-gap: 20px;
+    grid-template-areas:
+        "title title"
+        "member member"
+        "member member";
+}
+.title{
+    grid-area: title;
+    justify-content: center;
+    align-self: center;
+}

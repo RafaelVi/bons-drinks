@@ -1,10 +1,27 @@
-header{
-    height: 1.3rem;
-
-}
 nav{
-    margin: 0.5rem;
+    display: flex;
+    align-self: center;
+    justify-content: space-between;
+}
+.nav-item{
+    font-family: var(--title-font);
+    font-size: 26px;
+    padding: 10px;
+}
+.nav-item:first-child {
+    margin-left: 34px;
+}
+.nav-item:nth-child(5) {
+    margin-right: 34px;
 }
 .Logo{
-    font-family: 'Bilbo Swash Caps', cursive;
+    font-family: var(--logo-font);
+    font-size: 36px;
+    padding: 8px;
 }
+.Logo, .nav-item{
+    text-decoration: none;
+    color: #fffbef;
+    align-self: center;
+}
+

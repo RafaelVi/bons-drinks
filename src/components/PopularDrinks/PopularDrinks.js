@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "../../Button/Button";
+import './PopularDrinks.css'
 
 const PopularDrinks = () => {
   const [drinks, setDrinks] = React.useState([]);
@@ -18,13 +18,12 @@ const PopularDrinks = () => {
     <div>
       <ul className="lista">
         {drinks.slice(0,10).map((drink) => {
-          return <li key={drink.idDrink}>
-              <p>{drink.strDrink}</p>
-              <img src={drink.strDrinkThumb} alt="drink"/>
-              </li>;
+          return <div key={drink.idDrink} className="card-drinks">
+              <img src={drink.strDrinkThumb} className="img-drinks" alt="drink"/>
+              <p className="text-drinks">{drink.strDrink}</p>
+              </div>;
         })}
       </ul>
-      <Button isGreen={true} name={"Cadastrar"}/>
     </div>
   );
 

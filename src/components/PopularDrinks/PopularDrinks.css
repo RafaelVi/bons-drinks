@@ -1,0 +1,9 @@
+.lista{
+    display: grid;
+    justify-self: center;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: auto;
+    grid-gap: 20px;
+    gap: 20px;
+    grid-auto-flow: dense;
+}

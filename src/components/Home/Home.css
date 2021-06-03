@@ -1,0 +1,17 @@
+.mainLogo{
+    font-family: var(--logo-font);
+    font-size: 120px;
+    text-align: center;
+    color: #fffbef;
+    z-index: 2;
+    margin: 0;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+#main-home{
+    background: url("https://images.unsplash.com/photo-1514933651103-005eec06c04b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1")
+    no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}

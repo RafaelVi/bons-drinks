@@ -6,11 +6,11 @@ const Header = () => {
     return (
         <header>
             <nav>
-                <NavLink to="/aboutUs">About Us</NavLink>
-                <NavLink to="/ourTeam">Our Team</NavLink>
+                <NavLink to="/aboutUs" className="nav-item">Sobre Nós</NavLink>
+                <NavLink to="/ourTeam" className="nav-item">Nosso Time</NavLink>
                 <NavLink to="/" className="Logo">Bons Drinks</NavLink>
-                <NavLink to="/drinks/pop">Drinks</NavLink>
-                <NavLink to="/contact">Contact</NavLink>
+                <NavLink to="/drinks/pop" className="nav-item">Drinks</NavLink>
+                <NavLink to="/contact" className="nav-item">Contato</NavLink>
                 
             </nav>
 

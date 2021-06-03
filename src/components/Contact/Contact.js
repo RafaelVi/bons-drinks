@@ -17,17 +17,25 @@ const Contact = () => {
     history.push("/");
   };
   return (
-    <main>
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="name">Name</label>
-        <input type="text" name="name" required /> <br />
-        <br></br>
-        <label htmlFor="email">Email</label>
-        <input type="email" name="email" required /> <br />
-        <label htmlFor="comment">Sua mensagem</label> <br />
-        <textarea name="comment" cols="30" rows="10" required></textarea>
-        <input type="submit" placeholder="Enviar"></input>
-      </form>
+    <main className="animeLeft">
+      <section className="grid-content">
+        <h1 className="title-contact-us">Contato</h1>
+        <img
+          src="https://albanypoets.com/wp-content/uploads/2019/09/typewriter.jpg"
+          alt="contact us"
+          className="img-contact-us"
+        />
+        <form onSubmit={handleSubmit} className="form-contact-us">
+          <label htmlFor="name">Nome:</label>
+          <input type="text" name="name" required className="input-contact" /> <br />
+          <br></br>
+          <label htmlFor="email" >Email:</label>
+          <input type="email" name="email" className="input-contact" required /> <br />
+          <label htmlFor="comment">Sua mensagem</label> <br />
+          <textarea name="comment" cols="30" rows="10" required></textarea><br />
+          <input type="submit" placeholder="Enviar" className="btn-contact"></input>
+        </form>
+      </section>
     </main>
   );
 };

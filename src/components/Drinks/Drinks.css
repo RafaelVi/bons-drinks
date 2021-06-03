@@ -1,0 +1,45 @@
+.drinks-btn{
+    color: #fffdf8;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 700;
+    justify-self: center;
+    background: #5c0511;
+    border-radius: 5px;
+    padding: 8px 20px;
+    margin: 10px;
+    transition: all 0.5s;
+}
+.drinks-btn:hover{
+    background-color: transparent;
+    border: 1px solid #5c0511;
+    color: #5c0511; 
+}
+.activeDrinks{
+    background-color: transparent;
+    border: 1px solid #5c0511;
+    color: #5c0511; 
+}
+.title{
+    grid-area: title;
+}
+.img-drinks{
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    border-radius: 5px;
+}
+.card-drinks{
+    border: 2px solid black;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px rgb(0 0 0 / 42%);
+    width: 60%;
+    align-self: center;
+    justify-self: center;
+    padding: 20px;
+}
+.text-drinks{
+    font-size: medium;
+    max-height: 18px;
+    font-size: 0.98rem;
+}

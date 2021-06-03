@@ -11,3 +11,7 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+:root{
+  --logo-font: "Bilbo Swash Caps",cursive;
+  --title-font: "Open Sans Condensed",sans-serif;
+}
