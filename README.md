@@ -90,5 +90,5 @@ $ npm start
 
 <div align="center">
   <sub>Copyright © 2021</sub>
-  <p>Bons Drinks <a href="https://github.com/anvitrola/doarte-app/blob/responsiveness/LICENSE">is MIT licensed 💖</a></p>
+  <p>Bons Drinks <a href="https://github.com/RafaelVi/bons-drinks/blob/main/LICENSE">is MIT licensed 💖</a></p>
 </div>
